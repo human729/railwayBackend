@@ -21,7 +21,7 @@ public class RecipeController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<RecipeDto> getRecipeById(@PathVariable("recipe_id") Long id) {
+    public ResponseEntity<RecipeDto> getRecipeById(@PathVariable("id") Long id) {
         RecipeDto recipeDto = service.getRecipeById(id);
         return ResponseEntity.ok(recipeDto);
     }

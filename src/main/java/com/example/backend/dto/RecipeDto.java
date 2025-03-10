@@ -1,7 +1,7 @@
 package com.example.backend.dto;
 
 public class RecipeDto {
-    long recipe_id;
+    long id;
     String recpName;
     String cookingTime;
     String recpDescription;
@@ -13,7 +13,7 @@ public class RecipeDto {
     public RecipeDto() {};
 
     public RecipeDto(long recipe_id, String recpName, String cookingTime, String recpDescription, int calorie, int protein, int fats, int carbohydrate) {
-        this.recipe_id = recipe_id;
+        this.id = recipe_id;
         this.recpName = recpName;
         this.cookingTime = cookingTime;
         this.recpDescription = recpDescription;
@@ -23,8 +23,8 @@ public class RecipeDto {
         this.carbohydrate = carbohydrate;
     }
 
-    public long getRecipe_id() {
-        return recipe_id;
+    public long getId() {
+        return id;
     }
 
     public int getCarbohydrate() {
@@ -55,8 +55,8 @@ public class RecipeDto {
         return calorie;
     }
 
-    public void setRecipe_id(long recipe_id) {
-        this.recipe_id = recipe_id;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setRecpDescription(String recpDescription) {

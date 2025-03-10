@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long recipe_id;
+    private long id;
 
     @Column(name = "recipe_name")
     private String recpName;
@@ -33,7 +33,7 @@ public class Recipe {
     public Recipe() {};
 
     public Recipe(long id, String name, String cookingTime, String recpDescription, int calorie, int protein, int fats, int carbohydrate) {
-        recipe_id = id;
+        this.id = id;
         recpName = name;
         this.cookingTime = cookingTime;
         this.recpDescription = recpDescription;
@@ -43,8 +43,8 @@ public class Recipe {
         this.carbohydrate = carbohydrate;
     }
 
-    public long getRecipe_id() {
-        return recipe_id;
+    public long getId() {
+        return id;
     }
 
     public String getRecpName() {
@@ -95,8 +95,8 @@ public class Recipe {
         this.protein = protein;
     }
 
-    public void setRecipe_id(long recipe_id) {
-        this.recipe_id = recipe_id;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setRecpDescription(String recpDescription) {
