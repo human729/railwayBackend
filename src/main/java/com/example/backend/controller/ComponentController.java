@@ -22,7 +22,7 @@ public class ComponentController {
         ComponentDto componentDto = service.getComponentById(id);
         return ResponseEntity.ok(componentDto);
     }
-
+//
     @GetMapping
     public ResponseEntity<List<ComponentDto>> getAllComponents() {
         List<ComponentDto> components = service.getAllComponents();
