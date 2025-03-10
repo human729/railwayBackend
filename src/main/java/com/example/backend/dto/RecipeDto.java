@@ -10,7 +10,7 @@ public class RecipeDto {
     int fats;
     int carbohydrate;
 
-    public RecipeDto() {};
+    public RecipeDto() {}
 
     public RecipeDto(long recipe_id, String recpName, String cookingTime, String recpDescription, int calorie, int protein, int fats, int carbohydrate) {
         this.id = recipe_id;
