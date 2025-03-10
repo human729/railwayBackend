@@ -6,7 +6,7 @@ import com.example.backend.entity.Recipe;
 public class RecipeMapper {
     public static RecipeDto mapToRecipeDto(Recipe recipe) {
         return new RecipeDto(
-                recipe.getId(),
+                recipe.getRecipe_id(),
                 recipe.getRecpName(),
                 recipe.getCookingTime(),
                 recipe.getRecpDescription(),
