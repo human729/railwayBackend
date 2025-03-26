@@ -19,6 +19,9 @@ public class Recipe {
     private String recpDescription;
 
     @Column
+    private String imageUrl;
+
+    @Column
     private int calorie;
 
     @Column
@@ -32,11 +35,12 @@ public class Recipe {
 
     public Recipe() {};
 
-    public Recipe(long id, String name, String cookingTime, String recpDescription, int calorie, int protein, int fats, int carbohydrate) {
+    public Recipe(long id, String name, String cookingTime, String recpDescription, String imageUrl, int calorie, int protein, int fats, int carbohydrate) {
         this.recipe_id = id;
         recpName = name;
         this.cookingTime = cookingTime;
         this.recpDescription = recpDescription;
+        this.imageUrl = imageUrl;
         this.calorie = calorie;
         this.protein = protein;
         this.fats = fats;
@@ -53,6 +57,10 @@ public class Recipe {
 
     public String getRecpDescription() {
         return recpDescription;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public String getCookingTime() {
@@ -93,6 +101,10 @@ public class Recipe {
 
     public void setProtein(int protein) {
         this.protein = protein;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public void setRecipe_id(long recipe_id) {

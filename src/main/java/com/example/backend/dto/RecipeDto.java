@@ -5,6 +5,7 @@ public class RecipeDto {
     String recpName;
     String cookingTime;
     String recpDescription;
+    String imageUrl;
     int calorie;
     int protein;
     int fats;
@@ -12,11 +13,12 @@ public class RecipeDto {
 
     public RecipeDto() {}
 
-    public RecipeDto(long recipe_id, String recpName, String cookingTime, String recpDescription, int calorie, int protein, int fats, int carbohydrate) {
+    public RecipeDto(long recipe_id, String recpName, String cookingTime, String recpDescription, String imageUrl, int calorie, int protein, int fats, int carbohydrate) {
         this.id = recipe_id;
         this.recpName = recpName;
         this.cookingTime = cookingTime;
         this.recpDescription = recpDescription;
+        this.imageUrl = imageUrl;
         this.calorie = calorie;
         this.protein = protein;
         this.fats = fats;
@@ -51,6 +53,10 @@ public class RecipeDto {
         return recpDescription;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     public int getCalorie() {
         return calorie;
     }
@@ -73,6 +79,10 @@ public class RecipeDto {
 
     public void setCarbohydrate(int carbohydrate) {
         this.carbohydrate = carbohydrate;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public void setProtein(int protein) {
